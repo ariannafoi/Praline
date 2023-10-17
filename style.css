@@ -1,0 +1,17 @@
+/* palette colori: 
+baker's chocolate: #452212;
+caramel: #A8572C;
+negroni: #ECC194;
+white: #FFFFFF;
+*/
+
+
+.row-one-custom{
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ECC194, #A8572C);
+    height: 50vh;
+}
+
+.row-two-custom{
+    background: linear-gradient(to left, #A8572C, #ECC194, rgba(255, 255, 255, 0));
+    height: 50vh;
+}
