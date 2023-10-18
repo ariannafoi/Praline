@@ -5,13 +5,114 @@ negroni: #ECC194;
 white: #FFFFFF;
 */
 
+/* ICONE IMPORTATE */
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/share.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
 
 .row-one-custom{
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ECC194, #A8572C);
+    background: linear-gradient(to left, #ECC194, #A8572C);
     height: 50vh;
 }
 
 .row-two-custom{
-    background: linear-gradient(to left, #A8572C, #ECC194, rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, #A8572C, #ECC194);
     height: 50vh;
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar{
+        width: 100px;
+        height: 100vh;
+        align-items: flex-start;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        top: 30px;
+    }
+}
+
+.position-nav{
+    position: relative;
+
+    z-index: 99;
+    background-color: #AD5E33;
+}
+
+.position-container{
+    position: absolute;
+    top: 0px;
+}
+
+.space-for-p1{
+    width: 400px;
+    height: fit-content;
+    position: relative;
+    bottom: 190px;
+    left: 130px;
+}
+
+.p1-custom{
+    font-size: 70px;
+    color: #452212;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.space-for-p2{
+    width: 420px;
+    height: fit-content;
+    position: relative;
+    left: 550px; 
+}
+
+.p2-custom{
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cerchio{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #452212;
+    color: #452212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    left: 80%;
+    top: 100px;
+}
+
+.cerchio:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+
+/* SHARE BUTTON */
+.icon {
+    color: white;
+    margin: 0 0 10px 15px;
 }
