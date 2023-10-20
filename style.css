@@ -99,6 +99,11 @@ white: #FFFFFF;
         font-family: 'Montserrat', sans-serif;
         text-shadow: 3px 2px 10px #452212 ;
     }
+
+    .madeBy{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
     
     .cerchio{
         width: 50px;
@@ -136,6 +141,12 @@ white: #FFFFFF;
     img {
         width: 50%;
         height: auto;
+    }
+
+    #hoverImage {
+        display: none;
+        transform: scale(0.8);
+        transition: transform 0.3s ease-in-out;
     }
     
     /* SHARE BUTTON */

@@ -32,7 +32,7 @@ let products = [
     },
     {
         description: 'Gelato alla vaniglia avvolto in cioccolato bianco Magnum. Una dolcezza perfettamente bilanciata.', 
-        img: "./img/2.avif", 
+        img: "./img/2.avif",
         name: 'Magnum Bianco'
     },
 
