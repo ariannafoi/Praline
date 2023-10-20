@@ -10,18 +10,34 @@ white: #FFFFFF;
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
 
-.row-one-custom{
-    background: linear-gradient(to left, #ECC194, #A8572C);
-    height: 50vh;
+@font-face {
+    font-family: 'TAN-PEARL';
+    src: url('TAN-PEARL.woff2') format('woff2'),
+         url('TAN-PEARL.woff') format('woff'),
+         url('TAN-PEARL.ttf') format('truetype'),
+         url('TAN-PEARL.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.row-two-custom{
-    background: linear-gradient(to left, #A8572C, #ECC194);
-    height: 50vh;
-}
 
 
 @media screen and (min-width: 992px){
+
+    .logo{
+        width: 100px;
+    }
+
+    .row-one-custom{
+        background: linear-gradient(to left, #ECC194, #A8572C);
+        height: 50vh;
+    }
+    
+    .row-two-custom{
+        background: linear-gradient(to left, #A8572C, #ECC194);
+        height: 50vh;
+    }
+
     .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -39,80 +55,92 @@ white: #FFFFFF;
         position: relative;
         top: 30px;
     }
-}
 
-.position-nav{
-    position: relative;
-
-    z-index: 99;
-    background-color: #AD5E33;
-}
-
-.position-container{
-    position: absolute;
-    top: 0px;
-}
-
-.space-for-p1{
-    width: 400px;
-    height: fit-content;
-    position: relative;
-    bottom: 190px;
-    left: 130px;
-}
-
-.p1-custom{
-    font-size: 70px;
-    color: #452212;
-    font-family: 'Merriweather', serif;
-    text-align: center;
-}
-
-.space-for-p2{
-    width: 420px;
-    height: fit-content;
-    position: relative;
-    left: 550px; 
-}
-
-.p2-custom{
-    position: absolute;
-    top: 150px;
-    right: 100px;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.cerchio{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #452212;
-    color: #452212;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    position: relative;
-    left: 80%;
-    top: 100px;
-}
-
-.cerchio:hover{
-    border: 1px solid white;
-    color: white;
-}
-
-img {
-    width: 50%;
-    height: auto;
-}
-
-
-/* SHARE BUTTON */
-.icon {
-    color: white;
-    margin: 0 0 10px 15px;
+    .position-nav{
+        position: relative;
+        z-index: 99;
+        background-color: #AD5E33;
+    }
+    
+    .position-container{
+        position: absolute;
+        top: 0px;
+    }
+    
+    .space-for-p1{
+        width: 450px;
+        height: fit-content;
+        position: relative;
+        bottom: 340px;
+        left: 120px;
+    }
+    
+    .p1-custom{
+        font-size: 70px;
+        color: #452212;
+        font-family: 'TAN-PEARL', sans-serif;
+        text-shadow: 3px 2px 10px #ECC194 ;
+        text-align: center;
+    }
+    
+    .space-for-p2{
+        width: 450px;
+        height: fit-content;
+        position: relative;
+        top: 60px;
+        left: 470px;
+    }
+    
+    .p2-custom{
+        position: relative;
+        font-size: 30px;
+        color: white;
+        text-align: start;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 3px 2px 10px #452212 ;
+    }
+    
+    .cerchio{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #452212;
+        color: #452212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        position: relative;
+        left: 80%;
+        top: 100px;
+    }
+    
+    .cerchio:hover{
+        border: 1px solid white;
+        color: white;
+    }
+    
+    .anteprima{
+        width: 90px;
+        height: 40px;
+        background-color: #A8572C;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 80%;
+        top: 105px;
+    }
+    
+    img {
+        width: 50%;
+        height: auto;
+    }
+    
+    /* SHARE BUTTON */
+    .icon {
+        color: white;
+        margin: 0 0 10px 15px;
+    }
 }
