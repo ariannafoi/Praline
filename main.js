@@ -8,17 +8,16 @@ let imgElement = document.querySelector('#iceCreamImg');
 //creo dinamicamente h1
 let div = document.querySelector('.space-for-p1');
 let nameProduct = document.createElement('p');
-nameProduct.textContent = 'Magnum Classico';
+nameProduct.textContent = 'Fondente Extra';
 div.appendChild(nameProduct);
 
 //aggancio attributo classe che è presente nello style
 nameProduct.setAttribute('class', 'p1-custom');
 
-
 //creo dinamicamente p
 let div2 = document.querySelector('.space-for-p2');
 let descriptionProduct = document.createElement('p');
-descriptionProduct.textContent = 'Il perfetto equilibrio tra il cioccolato croccante Magnum e il morbido e cremoso gelato alla vaniglia.';
+descriptionProduct.textContent = 'Iconica pralina dall’incarto nero e doppio fiocco: un guscio croccante di finissimo cioccolato extra fondente che racchiude un irresistibile ripieno.';
 div2.appendChild(descriptionProduct);
 
 //aggancio attributo per lo stile paragrafo
@@ -26,38 +25,36 @@ descriptionProduct.setAttribute('class', 'p2-custom');
 
 let products = [
     {
-        description: 'Il perfetto equilibrio tra il cioccolato croccante Magnum e il morbido e cremoso gelato alla vaniglia.', 
-        img: "./img/1.avif", 
-        name: 'Magnum Classico',
+        description: 'Iconica pralina dall’incarto nero e doppio fiocco: un guscio croccante di finissimo cioccolato extra fondente che racchiude un irresistibile ripieno.', 
+        img: "./img/foto1.webp", 
+        name: 'Fondente Extra',
     },
     {
-        description: 'Gelato alla vaniglia avvolto in cioccolato bianco Magnum. Una dolcezza perfettamente bilanciata.', 
-        img: "./img/2.avif",
-        name: 'Magnum Bianco'
+        description: 'Iconiche praline dall’incarto colorato e doppio fiocco: un guscio croccante di finissimo cioccolato racchiude un irresistibile ripieno.', 
+        img: "./img/foto2.webp",
+        name: 'Assortite'
     },
 
     {
-        description: 'Morbido e cremoso gelato alla vaniglia ricoperto di croccante cioccolato al latte Magnum e pezzetti di mandorle.', 
-        img: "./img/3.avif", 
-        name: 'Magnum Mandorle'
+        description: 'Iconica pralina dall’incarto verde e doppio fiocco: un guscio croccante di finissimo cioccolato al latte racchiude un irresistibile ripieno al pistacchio.', 
+        img: "./img/foto3.webp", 
+        name: 'Pistacchio'
     },
     {
-        description: 'Gustoso gelato alla nocciola variegato con gelato alla vaniglia, con una doppia copertura di cioccolato bianco e cioccolato al latte con pezzetti di nocciole caramellate.', 
-        img: "./img/4.avif", 
-        name: 'Magnum Nocciola Remix'
+        description: 'Il Cornet Doppio Cioccolato contiene 200g di praline. Un cuore di morbido ed irresistibile ripieno fondente racchiuso in un guscio di finissimo cioccolato al latte.', 
+        img: "./img/foto4.webp", 
+        name: 'Doppio Cioccolato'
     },
     {
-        description: 'Gelato al gusto di biscotto variegato con gelato al gusto di noce pecan, con guarnitura al caramello salato, cioccolato bianco con caramello e pezzetti di biscotto.', 
-        img: "./img/5.avif", 
-        name: 'Magnum Double Caramel'
+        description: "L'iconica pralina con un cuore di morbido ed irresistibile caramello con un pizzico di sale racchiuso in un guscio di finissimo cioccolato al latte.", 
+        img: "./img/foto5.webp", 
+        name: 'Caramello Salato'
     },
 ];
 
-let currentImgIndex = 0; 
+let currentImgIndex = 0;
 
-btnNext.addEventListener('click', function () {
-    currentImgIndex = (currentImgIndex + 1) % products.length;
-
+function updateProductInfo(){
     imgElement.src = products[currentImgIndex].img;
 
     nameProduct.textContent = products[currentImgIndex].name;
@@ -65,17 +62,15 @@ btnNext.addEventListener('click', function () {
 
     descriptionProduct.textContent = products[currentImgIndex].description;
     div2.appendChild(descriptionProduct);
+}
+
+btnNext.addEventListener('click', function () {
+    currentImgIndex = (currentImgIndex + 1) % products.length;
+    updateProductInfo();
 
 });
 
 btnPreview.addEventListener('click', function () {
     currentImgIndex = (currentImgIndex - 1 + products.length) % products.length;
-
-    imgElement.src = products[currentImgIndex].img;
-
-    nameProduct.textContent = products[currentImgIndex].name;
-    div.appendChild(nameProduct);
-
-    descriptionProduct.textContent = products[currentImgIndex].description;
-    div2.appendChild(descriptionProduct);
+    updateProductInfo();
 });
